@@ -13,6 +13,13 @@ func main() {
 		AllowOrigins: []string{
 			"http://localhost:3000",
 		},
+		AllowHeaders: []string{
+			"X-PINGOTHER",
+		},
+		AllowMethods: []string{
+			"GET",
+			"OPTIONS",
+		},
 	}))
 
 	corsGroupRouter := router.Group("/cors")
