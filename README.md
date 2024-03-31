@@ -13,3 +13,8 @@
 1. localhost:3000 から localhost:1991 に GET リクエストを出す ボタンをクリックする
 2. デフォルトだと GET リクエストが上手くいくようになっている．
 3. backend/main.go の AllowOrigins から http://localhost:3000 を消すと GET リクエストが失敗する（go の server 側で，http://localhost:3000 からのアクセスを許可しない設定になるため）．
+
+# 他オリジンから header を加えて GET リクエスト
+1. localhost:3000 から localhost:1991 に X-PINGOTHER header を加えて GET リクエストを出す ボタンをクリックする
+2. デフォルトだと GET リクエストが上手くいくようになっている．
+3. backend/main.go の AllowHeaders から X-PINGOTHER を消すと GET リクエストが失敗する（go の server 側で，X-PINGOTHER request header を許可しない設定になるため）．
